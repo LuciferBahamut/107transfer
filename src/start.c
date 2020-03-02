@@ -9,6 +9,10 @@
 
 int start(int ac, char **av)
 {
+    if (ac == 2 && my_strcmp(av[1], av[1])) {
+        help_display();
+        return (SUCCESS);
+    }
     if (error_handling(ac, av))
         return (ERROR);
     return (SUCCESS);

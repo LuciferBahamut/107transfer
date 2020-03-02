@@ -26,6 +26,7 @@
 #define FALSE 0
 #define TRUE 1
 
+void write_error(char *str);
 int error_handling(int ac, char **av);
 int start(int ac, char **av);
 

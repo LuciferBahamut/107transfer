@@ -7,8 +7,10 @@
 
 NAME	=	107transfer
 
-SRC	=	src/main.c \
-		src/start.c
+SRC	=	src/main.c 		\
+		src/start.c		\
+		src/error_handling.c	\
+		src/write_error.c
 
 CC	=	gcc
 

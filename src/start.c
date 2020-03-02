@@ -9,5 +9,7 @@
 
 int start(int ac, char **av)
 {
+    if (error_handling(ac, av))
+        return (ERROR);
     return (SUCCESS);
 }

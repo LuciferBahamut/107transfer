@@ -8,9 +8,6 @@
 #ifndef MY_H_
 #define MY_H_
 
-#define SUCCESS 0
-#define ERROR 84
-
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -24,6 +21,12 @@
 #include <errno.h>
 #include <math.h>
 
+#define SUCCESS 0
+#define ERROR 84
+#define FALSE 0
+#define TRUE 1
+
+int error_handling(int ac, char **av);
 int start(int ac, char **av);
 
 #endif

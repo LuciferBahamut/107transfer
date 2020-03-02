@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2019
-** my.h
+** 107transfer
 ** File description:
 ** my.h
 */
@@ -22,6 +22,7 @@
 #include <pwd.h>
 #include <grp.h>
 #include <errno.h>
+#include <math.h>
 
 int start();
 

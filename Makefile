@@ -1,8 +1,8 @@
 ##
 ## EPITECH PROJECT, 2019
-## makefile
+## 107transfer
 ## File description:
-## project
+## Makefile
 ##
 
 NAME	=	107transfer
@@ -14,17 +14,19 @@ CC	=	gcc
 
 DEFLAGS	=	-W -Wextra -Wall -g3
 
-CPPFLAGS	=	-I./include/
+CPPFLAGS=	-I./include/
 
 CFFLAGS	=	tests/unit_tests.c -I./include --coverage -lcriterion
+
+LDFLAGS	=	-lm
 
 OBJ	=	$(SRC:.c=.o)
 
 all	:	$(OBJ)
-		$(CC) $(DEFLAGS) -o $(NAME) $(OBJ) $(CPPFLAGS)
+		$(CC) $(DEFLAGS) -o $(NAME) $(OBJ) $(CPPFLAGS) $(LDFLAGS)
 
 tests_run	:
-		$(CC) -o unit_tests src/*.c $(CFFLAGS)
+		$(CC) -o unit_tests src/*.c $(CFFLAGS) $(LDFLAGS)
 
 clean	:
 		rm -f $(OBJ)

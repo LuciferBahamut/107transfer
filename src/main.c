@@ -1,11 +1,11 @@
 /*
 ** EPITECH PROJECT, 2020
-** main
+** 107transfer
 ** File description:
 ** main
 */
 
-#include "my.h"
+#include "transfer.h"
 
 int main()
 {

@@ -24,6 +24,6 @@
 #include <errno.h>
 #include <math.h>
 
-int start();
+int start(int ac, char **av);
 
 #endif

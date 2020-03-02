@@ -7,7 +7,7 @@
 
 #include "transfer.h"
 
-int start()
+int start(int ac, char **av)
 {
     return (SUCCESS);
 }

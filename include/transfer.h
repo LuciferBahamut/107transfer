@@ -35,12 +35,19 @@ typedef struct coef
     int max_b;
 } coef_t;
 
+int my_strcmp(char const *str1, char const *str2);
 void write_error(char *str);
+
 void help_display(void);
 int error_handling(int ac, char **av);
+
 int start(int ac, char **av);
-int my_strcmp(char const *str1, char const *str2);
-void compute(coef_t *co);
+void compute(coef_t *co, int ac, char **av);
+
+int count(char *str);
+char **my_split(char *src);
+coef_t *fill_struct(coef_t *co, char **av);
+coef_t *fill_sec_struct(coef_t *co, char *arg1, char *arg2);
 
 #define SUCCESS 0
 #define ERROR 84

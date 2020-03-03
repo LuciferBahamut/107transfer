@@ -9,11 +9,13 @@ NAME	=	107transfer
 
 SRC	=	src/main.c 		\
 		src/start.c		\
+		src/fill_struct.c	\
+		src/compute.c		\
 		src/error_handling.c	\
 		src/help_display.c	\
 		src/write_error.c	\
-		src/my_strcmp.c		\
-		src/compute.c
+		src/my_strcmp.c
+
 
 CC	=	gcc
 

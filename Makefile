@@ -13,7 +13,7 @@ SRC	=	src/main.c 		\
 		src/help_display.c	\
 		src/write_error.c	\
 		src/my_strcmp.c		\
-		src/my_strlen.c
+		src/compute.c
 
 CC	=	gcc
 
@@ -45,7 +45,8 @@ fclean	:	clean
 		rm -f src/*~ \
 		rm -f include/*~ \
 		rm -f *.gcda \
-		rm -f *.gcno
+		rm -f *.gcno \
+		rm -f file
 
 re	:	fclean all
 

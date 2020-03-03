@@ -22,10 +22,25 @@
 #include <math.h>
 #include <string.h>
 
+typedef struct coef
+{
+    char **str_a;
+    char **str_b;
+    int *tab_a;
+    int *tab_b;
+    double res_a;
+    double res_b;
+    double res;
+    int max_a;
+    int max_b;
+} coef_t;
+
 void write_error(char *str);
 void help_display(void);
 int error_handling(int ac, char **av);
 int start(int ac, char **av);
+int my_strcmp(char const *str1, char const *str2);
+void compute(coef_t *co);
 
 #define SUCCESS 0
 #define ERROR 84

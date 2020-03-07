@@ -18,6 +18,11 @@ int start(int ac, char **av)
     if (error_handling(ac, av))
         return (ERROR);
     co = fill_struct(co, av);
+    if (check_div(co, ac, av) == ERROR) {
+        free(co);
+        write_error(STR_ERROR_DIV);
+        return (ERROR);
+    }
     compute(co, ac, av);
     free(co);
     return (SUCCESS);

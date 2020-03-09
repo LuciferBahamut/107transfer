@@ -49,6 +49,8 @@ char **my_split(char *src);
 coef_t *fill_struct(coef_t *co, char **av);
 coef_t *fill_sec_struct(coef_t *co, char *arg1, char *arg2);
 
+int check_div(coef_t *co, int ac, char **av);
+
 #define SUCCESS 0
 #define ERROR 84
 #define FALSE 0
@@ -58,5 +60,6 @@ coef_t *fill_sec_struct(coef_t *co, char *arg1, char *arg2);
 #define STR_ERROR_ARGNBR "this program must take at least 3 arguments "
 #define STR_ERROR_STRING "one or more of the strings are incorrect "
 #define STR_ERROR_DEN "there must be the same number of NUM and DEN "
+#define STR_ERROR_DIV "error : division by 0\n"
 
 #endif

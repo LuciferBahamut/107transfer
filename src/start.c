@@ -11,7 +11,7 @@ int start(int ac, char **av)
 {
     coef_t *co;
 
-    if (ac == 2 && my_strcmp(av[1], av[1])) {
+    if (ac == 2 && my_strcmp(av[1], "-h")) {
         help_display();
         return (SUCCESS);
     }

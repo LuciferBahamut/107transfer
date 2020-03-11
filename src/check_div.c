@@ -38,7 +38,7 @@ int check_compute_complex(coef_t *co, int ac, char **av)
         res = check_get_result(co, x);
         for (int i = 1, j = 3; i != nbr_loop; i++, j += 2) {
             co = fill_sec_struct(co, av[j], av[j + 1]);
-            if (check_get_result(co, x == ERROR))
+            if (check_get_result(co, x) == ERROR)
                 return (ERROR);
             res *= check_get_result(co, x);
         }

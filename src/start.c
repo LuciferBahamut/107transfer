@@ -7,6 +7,22 @@
 
 #include "transfer.h"
 
+static void free_struct(coef_t *co, char *arg1, char *arg2)
+{
+    int nb = count(arg1);
+
+    for (int i = 0; i != nb; i++)
+        free(co->str_a[i]);
+    free(co->str_a);
+    nb = count(arg2);
+    for (int i = 0; i != nb; i++)
+        free(co->str_b[i]);
+    free(co->str_b);
+    free(co->tab_a);
+    free(co->tab_b);
+    free(co);
+}
+
 int start(int ac, char **av)
 {
     coef_t *co;
@@ -24,6 +40,6 @@ int start(int ac, char **av)
         return (ERROR);
     }
     compute(co, ac, av);
-    free(co);
+    free_struct(co, av[ac - 2] ,av[ac -1]);
     return (SUCCESS);
 }

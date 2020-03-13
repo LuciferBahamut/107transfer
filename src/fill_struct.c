@@ -43,26 +43,8 @@ char **my_split(char *src)
     return (str);
 }
 
-static void free_struct(coef_t *co, char *arg1, char *arg2)
-{
-    int nb = count(arg1);
-
-    for (int i = 0; i != nb; i++)
-        free(co->str_a[i]);
-    free(co->str_a);
-    nb = count(arg2);
-    for (int i = 0; i != nb; i++)
-        free(co->str_b[i]);
-    free(co->str_b);
-    free(co->tab_a);
-    free(co->tab_b);
-    free(co);
-}
-
 coef_t *fill_sec_struct(coef_t *co, char *arg1, char *arg2)
 {
-    free_struct(co, arg1, arg2);
-    co = malloc(sizeof(coef_t));
     co->tab_a = malloc(strlen(arg1));
     co->tab_b = malloc(strlen(arg2));
     co->str_a = my_split(arg1);
